@@ -1,0 +1,21 @@
+<%= form_for(@search_count) do |f| %>
+  <% if @search_count.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@search_count.errors.count, "error") %> prohibited this search_count from being saved:</h2>
+
+      <ul>
+      <% @search_count.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :counter %><br>
+    <%= f.number_field :counter %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

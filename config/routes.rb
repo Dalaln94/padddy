@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :search_counts
+
+  resources :items
+
+  resources :roles
+
+  resources :role_users
+
   get 'sessions/new'
 
   get 'sessions/create'

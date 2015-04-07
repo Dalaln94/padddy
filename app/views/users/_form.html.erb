@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :payment_Method %><br>
-    <%= f.text_field :payment_Method %>
+    <%= f.select :payment_Method, ["Visa", "DebitCard", "MasterCard"] %>
   </div>
   <div class="actions">
     <%= f.submit %>
