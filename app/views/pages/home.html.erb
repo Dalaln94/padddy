@@ -1,0 +1,26 @@
+<h1>WELCOMEEEE</h1>
+
+ <div class="menu classic sidebar-nav" id="nav-container">
+      <ul id="nav" class="menu">
+        <li>
+          <a href="/pages/home">HOME</a>
+          <ul class="sub-menu"></ul>
+        </li>
+
+        <li>
+          <a href="/items/">Items</a>
+          <ul class="sub-menu"></ul>
+        </li>
+		
+        <% if @current_user.present? %>
+            <% if @current_user.admin? %>
+                <li>
+                  <%= link_to 'New Item', new_item_path %>
+                </li>
+            <% end %>
+        <% end %>
+      </ul>
+      <!-- END MAIN NAVIGATION -->
+    </div>
+  </div>
+  <!-- END HEADER -->
